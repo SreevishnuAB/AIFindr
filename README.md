@@ -33,4 +33,15 @@ the whole project is dockerized; a single command sets up and starts all compone
 docker compose up -d
 ```
 
+## Screenshots
 
+![Searching for matches](image.png)
+![Explanation for the match](image-1.png)
+
+
+## Challenges
+
+---
+
+* Deciding on the scope
+* Accounting for Pinecone local's in-memory storage
