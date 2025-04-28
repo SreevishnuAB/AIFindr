@@ -1,0 +1,46 @@
+.br{
+    height: 2px;
+    width: 100px;
+}
+
+.card{
+    height: 250px;
+    width: 200px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ccc;
+    background-color: #282c34;
+    margin: 5px;
+}
+
+.card-body{
+    padding: 10px;
+    text-wrap: wrap;
+    overflow-y: auto;
+    height: 100px;
+}
+
+.card-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+}
+
+.score{
+    width: 60px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: #ccc;
+    color: #000;
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-inverse{
+    background-color: buttontext;
+    color: #1a1a1a;
+}

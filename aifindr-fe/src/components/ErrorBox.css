@@ -1,0 +1,13 @@
+.error-box{
+    width: 350px;
+    height: 40px;
+    position: fixed;
+    top: 110px;
+    right: 50px;
+    background-color: rgb(255, 63, 63);
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}

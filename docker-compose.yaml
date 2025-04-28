@@ -3,6 +3,24 @@ services:
     image: ghcr.io/pinecone-io/pinecone-local:latest
     environment: 
       PORT: 5080
-      PINECONE_HOST: localhost
+      PINECONE_HOST: pinecone
     ports: 
       - "5080-5090:5080-5090"
+  backend:
+    build: ./backend
+    ports: 
+      - "8000:8000"
+    depends_on:
+      - pinecone
+    env_file:
+      - ./backend/.env
+    environment:
+      - PINECONE_HOST=http://pinecone:5080
+  frontend:
+    build: ./aifindr-fe
+    ports: 
+      - "5173:5173"
+    depends_on:
+      - backend
+    environment:
+      - VITE_BACKEND_URL=http://localhost:8000

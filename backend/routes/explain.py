@@ -1,7 +1,8 @@
-from backend.models.explain import GetCompatibiityReasoningRequest
-from backend.models.profile import CompatibilityReasoning
-from backend.utils.llm import LLMUtils
 from fastapi import APIRouter
+
+from models.explain import CompatibilityReasoning, GetCompatibiityReasoningRequest
+from utils.llm import LLMUtils
+
 
 router = APIRouter(prefix="/explain")
 

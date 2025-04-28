@@ -1,9 +1,11 @@
 import os
+
+from dotenv import load_dotenv
 from google import genai
 from google.genai import types
 
-from backend.models.profile import CompatibilityReasoning
-from dotenv import load_dotenv
+from models.explain import CompatibilityReasoning
+
 
 load_dotenv()
 

@@ -1,0 +1,57 @@
+.profile-text{
+    width: 1000px;
+    height: 100px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #282c34;
+    padding: 5px;
+    border: 1px solid #ccc;
+
+}
+
+.search-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.search-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 80vh;
+    width: 100vw;
+}
+
+.controls{
+    width: 100vw;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.query{
+    width: 300px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin: 5px;
+}
+
+.search-results{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    height: 50vh;
+    width: 90vw;
+    border: solid 1px #ccc;
+    border-radius: 5px;
+    background-color: #383f4d;
+}

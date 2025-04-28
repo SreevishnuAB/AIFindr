@@ -1,5 +1,5 @@
 from typing import List
-from backend.models.profile import Profile
+from models.profile import Profile
 from pydantic import BaseModel
 
 class Search(BaseModel):

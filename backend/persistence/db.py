@@ -1,14 +1,21 @@
 import logging
+import os
 from typing import Dict, List
+
+from dotenv import load_dotenv
+
+load_dotenv()
 from pinecone.grpc import PineconeGRPC, GRPCClientConfig
 from pinecone import ServerlessSpec
 
+
 class PineconeWrapper:
     def __init__(self):
+        host = os.environ.get("PINECONE_HOST")
         self._dense_index_name = "dense-index"
         self._pc = PineconeGRPC(
             api_key="pclocal", 
-            host="http://localhost:5080"
+            host=host
             )
         self._logger = logging.getLogger(__name__)    
         self._initialize_pinecone()
@@ -41,3 +48,7 @@ class PineconeWrapper:
 
     def query(self, vector: List[float], top_k: int = 5):
         return self.index.query(vector, top_k=top_k, include_metadata=True, namespace="aifindr")
+    
+    def fetch(self, id: str):
+        self._logger.info(f"Getting record by id {id} from index {self._dense_index_name}")
+        return self.index.fetch(ids=[id], namespace="aifindr")
